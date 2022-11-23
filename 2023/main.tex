@@ -1,0 +1,74 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[sfdefault]{roboto}
+
+\usepackage{titling}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{fontawesome}
+\usepackage{setspace}
+\usepackage[export]{adjustbox}
+\usepackage[margin=20mm]{geometry}
+
+\usepackage{xcolor}
+\definecolor{turbo_purple}{RGB}{112,105,160}
+
+\usepackage{titlesec}
+\titleformat{\section}[block]{\normalfont\huge\bfseries\centering}{}{1em}{}
+\titleformat{\subsection}[display]{\normalfont\Large\bfseries\color{turbo_purple}}{}{1em}{}
+\titleformat{\subsubsection}[display]{\normalfont\large\bfseries}{}{}{\vspace{-1.2em}}[\vspace{-0.9em}]
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{tikzpagenodes}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{25pt}
+\lhead{}
+\rhead{\begin{tikzpicture}[remember picture,overlay]
+\draw  let \p1=($(current page.north)-(current page header area.south)$),
+      \n1={veclen(\x1,\y1)} in
+node [inner sep=0,outer sep=0,below left] 
+      at (current page.north east){\includegraphics[height=\n1]{../Assets/Sponsorship Header - Solid.png}};
+\end{tikzpicture}}
+\lfoot{\begin{tikzpicture}[remember picture,overlay]
+\draw  let \p1=($(current page footer area.north)-(current page.south)$),
+      \n1={veclen(\x1,\y1)} in
+node [inner sep=0,outer sep=0,above right] 
+      at (current page.south west){\includegraphics[height=\n1]{../Assets/Sponsorship Footer - Solid.png}};
+\end{tikzpicture}}
+\cfoot{\sffamily\selectfont\thepage}
+\usepackage{etoolbox}
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=false}
+
+\begin{document}
+
+\begin{titlepage}
+    \newgeometry{right=0mm,left=0mm,top=20mm,bottom=0mm}
+    \begin{center}
+        \vspace*{15mm}
+        \includegraphics[width=0.7\paperwidth]{../Assets/Logo (Dark).png} \\
+        \vspace{1cm}
+        \Huge MARS Course Guide \\
+        \huge \textcolor{turbo_purple}{2023}
+    \end{center}
+    \vfill
+    \includegraphics[height=0.5\paperheight, right]{../Assets/Pattern - PCB (Solid).png}
+    \vspace*{10mm}
+\end{titlepage}
+\restoregeometry
+
+\tableofcontents
+\newpage
+
+\chapter{Introduction}
+Intro
+
+\end{document}
