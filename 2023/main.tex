@@ -7,18 +7,23 @@
 \usepackage{wrapfig}
 \usepackage{subcaption}
 \usepackage{float}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{array}
 \usepackage{fontawesome}
 \usepackage{setspace}
 \usepackage[export]{adjustbox}
 \usepackage[margin=20mm]{geometry}
+\usepackage{multicol}
 
 \usepackage{xcolor}
 \definecolor{turbo_purple}{RGB}{112,105,160}
 
 \usepackage{titlesec}
-\titleformat{\section}[block]{\normalfont\huge\bfseries\centering}{}{1em}{}
-\titleformat{\subsection}[display]{\normalfont\Large\bfseries\color{turbo_purple}}{}{1em}{}
-\titleformat{\subsubsection}[display]{\normalfont\large\bfseries}{}{}{\vspace{-1.2em}}[\vspace{-0.9em}]
+\titleformat{\chapter}[block]{\normalfont\Huge\bfseries\centering}{}{1em}{}[]
+\titleformat{\section}[display]{\normalfont\huge\bfseries}{}{1em}{\vspace{-2em}}[\vspace{-1em}]
+\titleformat{\subsection}[display]{\normalfont\Large\bfseries\color{turbo_purple}}{}{1em}{\vspace{-1em}}[\vspace{-0.5em}]
+\titleformat{\subsubsection}[display]{\normalfont\large\bfseries}{}{1em}{\vspace{-1em}}[\vspace{-0.7em}]
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -66,24 +71,119 @@ node [inner sep=0,outer sep=0,above right]
 \restoregeometry
 \newpage
 \tableofcontents
-\chapter*{Introduction}
-    \subsection{Intro to the MARS Subject Guide}
+\chapter{Introduction}
     The 2023 UQ MARS Subject Guide has been created to guide all MARS members through their degree. This is a comprehensive guide that will present suggested program structures, enrolment plans, course profiles, and offer the chance to inform students of the specific pathways available within Mechatronics Engineering. We will aim to give specialised advice from our Exec team and various UQ MARS Alumni regarding study advice, course selection and general career advice. \\
     \\ The \textbf{UQ Mechatronics and Robotics Society} is also commmited to not just Mechatronics Engineering students, but also various student engineers studying in adjacent fields; This includes Electrical, Mechanical, Computer, Software specialisations, as well as people in similar degrees such as Computer Science and I.T. \\
     \\ The guide will be divided into the following sections: \\
     \\ The \textbf{Recommended Enrolment Plan} is a template made by the MARS execs to provide a simple enrolment plan and leaves rooms for electives as desired. \\
     \\ \textbf{Course Reviews and Advice} contains specific details and advice for courses required in the BE(Hons) in Mechatronic Engineering and the BE/ME programs, alongside some courses in the Computer Engineering Major; as a lot of our members take these as electives. \\
     
-    
-    
-    
-\chapter*{About MARS}
-\chapter*{Sponsors} % can probably make this more subtle later %
-\chapter*{Membership}
-\chapter*{Recommended Enrolment Plan}
-\chapter*{Course Reviews and Advice}
-\chapter*{Electives}
+    \section{About MARS}
+
+\chapter{Membership}
+
+\chapter{Recommended Enrolment Plan}
+We understand that it can be confusing and/or time consuming to plan out how to best structure the courses in your program. To make the process as simple as possible, we've provided a recommended enrolment plan for the Mechatronics course plans available at UQ. Please note that this is just a suggestion, and you may need to adjust the plan to account for the electives that you choose.
+\section{Bachelor of Engineering (Honours)}
+\subsection{Program Structure}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| m{6em} | m{5em} m{5em} m{5em} m{5em} m{5em} |}
+        \hline
+        \multicolumn{6}{|c|}{\bfseries First Year} \\
+        \hline
+        Semester 1 & \multicolumn{2}{c}{MATH1051 or MATH1071} & ENGG1100 & CSSE1001 & ELECTIVE \\
+        Semester 2 & \multicolumn{2}{c}{MATH1052 or MATH1072} & ENGG1300 & ENGG1700 & CSSE2010 \\
+        \hline
+    \end{tabular}
+\end{table}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| m{6em} | m{5em} m{5em} m{5em} m{5em} m{5em} |}
+        \hline
+        \multicolumn{6}{|c|}{\bfseries Second Year} \\
+        \hline
+        Semester 1 & MATH2001 & MECH2300 & ELEC2300 & MATH2010 & STAT2201 \\
+        Semester 2 & MECH2100 & MECH2210 & ELEC2004 & METR2800 & \\
+        \hline
+    \end{tabular}
+\end{table}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| m{6em} | m{5em} m{5em} m{5em} m{5em} m{5em} |}
+        \hline
+        \multicolumn{6}{|c|}{\bfseries Third Year} \\
+        \hline
+        Semester 1 & METR3001 & MAJOR & MAJOR & MAJOR & \\
+        Semester 2 & METR4810 & MAJOR & MAJOR & MAJOR & \\
+        \hline
+    \end{tabular}
+\end{table}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| m{6em} | m{5em} m{5em} m{5em} m{5em} m{5em} |}
+        \hline
+        \multicolumn{6}{|c|}{\bfseries Fourth Year} \\
+        \hline
+        Semester 1 & METR4201 & METR4202 & MAJOR & MAJOR & \\
+        Semester 2 & ENGG4900 & \multicolumn{2}{c}{METR4911 or METR4212} & ELECTIVE & \\
+        \hline
+    \end{tabular}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
 \newpage
+
+\subsection{Major Options}
+Within the Bachelor of Engineering (Honours) Mechatronics specialisation, there are 2 majors to choose from:
+\begin{itemize}
+    \item Computer Engineering
+    \item Mining Engineering
+\end{itemize}
+
+\subsubsection{Computer Engineering}
+To complete the computer engineering major under mechatronics, you must take the following 8 courses:
+\begin{multicols}{2}
+    \begin{itemize}
+        \item COMP3506
+        \item CSSE2002
+        \item CSSE2310
+        \item CSSE3010
+        \item ELEC3004
+        \item MECH3200
+        \item CSSE4010
+        \item CSSE4011
+    \end{itemize}
+\end{multicols}
+
+\subsubsection{Mining Engineering}
+To complete the mining engineering major under mechatronics, you must take the following 8 courses:
+\begin{multicols}{2}
+    \begin{itemize}
+        \item ELEC3004
+        \item MECH2300
+        \item MINE3110
+        \item MINE3122
+        \item MINE3123
+        \item MINE3129
+        \item MINE4124
+        \item MINE4129
+    \end{itemize}
+\end{multicols}
+
+\newpage
+
+\section{Bachelor of Engineering (Honours) and Master of Engineering}
+
+
+\chapter{Course Profiles}
+
+
+\chapter{Electives}
+
+
+\chapter{Sponsors} % can probably make this more subtle later %
 
 
 \end{document}
