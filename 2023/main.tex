@@ -19,6 +19,9 @@
 
 \usepackage{xcolor}
 \definecolor{turbo_purple}{RGB}{112,105,160}
+\definecolor{partner_bronze}{RGB}{205,127,50}
+\definecolor{partner_silver}{RGB}{170,169,173}
+\definecolor{partner_gold}{RGB}{212,175,55}
 
 \usepackage{titlesec}
 \titleformat{\chapter}[block]{\normalfont\Huge\bfseries\centering}{}{1em}{}[]
@@ -52,7 +55,6 @@ node [inner sep=0,outer sep=0,above right]
 \patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
 
 \usepackage[hidelinks]{hyperref}
-\hypersetup{colorlinks=false}
 
 \def\cstar{\faStar}
 \def\ostar{\faStar[regular]}
@@ -88,7 +90,7 @@ node [inner sep=0,outer sep=0,above right]
 
 \subfile{chapters/Advice.tex}
 
-\subfile{chapters/Sponsors.tex}
+\subfile{chapters/Partners.tex}
 
 \subfile{chapters/Acknowledgements.tex}
 
